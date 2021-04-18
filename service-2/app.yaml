@@ -1,6 +1,5 @@
 service: service-2
 runtime: nodejs
-env: flex
 
 manual_scaling:
   instances: 1
