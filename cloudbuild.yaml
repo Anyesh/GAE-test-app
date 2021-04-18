@@ -1,0 +1,17 @@
+steps:
+  - name: 'gcr.io/cloud-builders/gcloud'
+    id: deploy_default_app
+    args: ['app', 'deploy', 'main.yaml']
+    timeout: '600s'
+
+  - name: 'gcr.io/cloud-builders/gcloud'
+    id: deploy_service_1
+    args: ['app', 'deploy', 'app.yaml']
+    timeout: '600s'
+    dir: service-1
+
+  - name: 'gcr.io/cloud-builders/gcloud'
+    id: deploy_service_2
+    args: ['app', 'deploy', 'app.yaml']
+    timeout: '600s'
+    dir: service-2
