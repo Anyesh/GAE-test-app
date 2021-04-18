@@ -1,0 +1,14 @@
+'use strict';
+
+const express = require('express');
+
+const app = express();
+
+app.get('/service-2/', (req, res) => {
+  res.status(200).send('Service 2: Running Service 2!');
+});
+
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`service-2 server listening on port ${PORT}`);
+});
